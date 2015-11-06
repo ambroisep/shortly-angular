@@ -2,7 +2,7 @@ angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
   // Your code here
-  var getLinks = function () {
+  var getDBLinks = function () {
     return $http({
       method: 'GET',
       url: '/api/links'
@@ -13,7 +13,7 @@ angular.module('shortly.services', [])
   };
 
   return {
-    getLinks: getLinks
+    getDBLinks: getDBLinks
   };
 })
 .factory('Auth', function ($http, $location, $window) {
