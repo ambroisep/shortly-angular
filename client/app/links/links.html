@@ -1,5 +1,8 @@
 <div class="links">
-  <div class="link" ng-repeat="link in data.links">
+  <form>
+    <input ng-model='search' type='text' placeholder='Search'/>
+  </form>
+  <div class="link" ng-repeat="link in data.links | filter:search | orderBy:'-visits'">
     <img src="assets/redirect_icon.png"/>
     <div class="info">
       <div class="visits"><span class="count">{{link.visits}}</span>Visits</div>
