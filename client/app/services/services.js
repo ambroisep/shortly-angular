@@ -12,8 +12,20 @@ angular.module('shortly.services', [])
     });
   };
 
+  var postLinkDB = function (url) {
+    return $http({
+      method: 'POST',
+      url: '/api/links',
+      data: url
+    })
+    .then(function (resp) {
+      return resp.data;
+    });
+  };
+
   return {
-    getDBLinks: getDBLinks
+    getDBLinks: getDBLinks,
+    postLinkDB: postLinkDB
   };
 })
 .factory('Auth', function ($http, $location, $window) {

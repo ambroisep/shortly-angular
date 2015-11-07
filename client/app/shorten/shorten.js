@@ -1,5 +1,11 @@
 angular.module('shortly.shorten', [])
 
 .controller('ShortenController', function ($scope, $location, Links) {
-  // Your code here
+  $scope.urlObj = {};
+
+  $scope.createLink = function () {
+    Links.postLinkDB($scope.urlObj)
+      .then(function (url) {
+      });
+  };
 });

@@ -1,6 +1,14 @@
+<div class='navigation'>
+  <ul>
+    <li><a class='index'>All Links</a></li>
+    <li><a class='create'>Shorten</a></li>
+  </ul>  
+</div> 
 <div id='container'>
-<!-- Your code here -->
-
-</div>
-
-
+  <form ng-submit='createLink()'>
+    <input class='text' type='text' ng-model='urlObj.url'>
+    <button>Shorten</button>
+  </form>
+  <img class='spinner' src='assets/spiffygif_46x46.gif'>
+  <div class='message'></div>
+</div> 
