@@ -21,6 +21,10 @@ h1 {
   background-color: #eee;
 }
 
+.navigation .logout {
+  float: right;
+}
+
 .navigation ul {
   margin: 0;
   padding: 0;
@@ -31,7 +35,7 @@ h1 {
   float: left;
 }
 
-.navigation li a {
+.navigation li a , .logout{
   width: 100px;
   height: 20px;
   line-height: 20px;

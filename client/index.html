@@ -9,11 +9,12 @@
     <h1>Shortly</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div class="navigation" ng-controller="NavigationController">
-      <ul>
+    <div class="navigation">
+      <ul ng-controller="NavigationController">
         <li><a class="index" ng-click="goToLinks()">All Links</a></li>
         <li><a class="create" ng-click="goToShorten()">Shorten</a></li>
-      </ul>  
+      </ul>
+        <a class="logout" ng-controller="AuthController" ng-click="signout()">Logout</a>
     </div> 
     <div id="container" ng-view></div>
 
