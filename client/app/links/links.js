@@ -9,7 +9,7 @@ angular.module('shortly.links', [])
       .then(function (linksArray) {
         $scope.data.links = linksArray;
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       });
   };
