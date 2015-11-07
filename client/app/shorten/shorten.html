@@ -1,8 +1,18 @@
-<div id='container'>
+<div class='creator'>
   <form ng-submit='addLink()'>
     <input class='text' type='text' ng-model='link.url'>
     <button>Shorten</button>
   </form>
-  <img class='spinner' src='assets/spiffygif_46x46.gif'>
-  <div class='message'></div>
+  <img class='spinner' src='assets/spiffygif_46x46.gif' ng-show='display'>
+  <div class='message'  ng-show='link.data'>
+    <div class="link">
+      <img src='assets/redirect_icon.png'/>
+      <div class='info'>
+        <div class='visits'><span class='count'>{{link.data.visits}}</span>Visits</div>
+        <div class='title'>{{link.data.title}}</div>
+        <div class='original'>{{link.data.url}}</div>
+        <a href='{{base_url}}/{{code}}'>{{link.data.base_url}}/{{link.data.code}}</a>
+      </div>
+    </div>
+  </div>
 </div> 
