@@ -8,6 +8,9 @@ angular.module('shortly.links', [])
     Links.getDBLinks()
       .then(function (linksArray) {
         $scope.data.links = linksArray;
+      })
+      .catch(function(error) {
+        console.log(error);
       });
   };
 
