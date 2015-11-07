@@ -2,13 +2,13 @@ angular.module('shortly.shorten', [])
 
 .controller('ShortenController', function ($scope, $location, Links) {
   $scope.link = {};
-  $scope.display = false;
+  $scope.displaySpinner = false;
 
   $scope.addLink = function () {
-    $scope.display = true;
+    $scope.displaySpinner = true;
     Links.postLinkDB($scope.link)
       .then(function (data) {
-        $scope.display = false;
+        $scope.displaySpinner = false;
         $scope.link.url = '';
         $scope.link.data = data;
       });
