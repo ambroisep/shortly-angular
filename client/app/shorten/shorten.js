@@ -6,6 +6,7 @@ angular.module('shortly.shorten', [])
   $scope.createLink = function () {
     Links.postLinkDB($scope.urlObj)
       .then(function (url) {
+        $scope.urlObj.url = '';
       });
   };
 });

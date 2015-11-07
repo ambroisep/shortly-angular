@@ -49,6 +49,14 @@ angular.module('shortly', [
   };
   return attach;
 })
+.controller('NavigationController', function ($scope, $location) {
+  $scope.goToLinks = function () {
+    $location.path('/links');
+  };
+  $scope.goToShorten = function () {
+    $location.path('/shorten');
+  };
+})
 .run(function ($rootScope, $location, Auth) {
   // here inside the run phase of angular, our services and controllers
   // have just been registered and our app is ready
