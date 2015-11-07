@@ -9,6 +9,9 @@ angular.module('shortly.services', [])
     })
     .then(function (resp) {
       return resp.data;
+    })
+    .catch(function (err) {
+      return err;
     });
   };
 
@@ -20,8 +23,12 @@ angular.module('shortly.services', [])
     })
     .then(function (resp) {
       return resp.data;
+    })
+    .catch(function (err) {
+      return err;
     });
   };
+
 
   return {
     getDBLinks: getDBLinks,
